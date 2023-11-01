@@ -22,5 +22,11 @@ class Fraction:
 
 
 fr = Fraction(4, 7)
+fr1 = Fraction(2, 7)
 
 fr.show()
+fr1.show()
+
+fr2 = fr + fr1
+
+fr2.show()
