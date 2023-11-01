@@ -34,6 +34,13 @@ class Fraction:
     def __truediv__(self, other):
         return Fraction(self.numerator * other.denominator, self.denominator * other.numerator)
 
+    def short(self):
+        for i in range(2, self.numerator + 1):
+            if self.numerator % i == 0 and self.denominator % i == 0:
+                self.numerator //= i
+                self.denominator //= i
+                break
+
     def show(self):
         print(f"{self.numerator} / {self.denominator}")
 
@@ -47,3 +54,11 @@ fr1.show()
 fr2 = fr / fr1
 
 fr2.show()
+
+fr3 = Fraction(16, 24)
+
+fr3.show()
+
+fr3.short()
+
+fr3.show()
