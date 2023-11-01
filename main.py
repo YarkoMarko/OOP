@@ -35,27 +35,30 @@ class Fraction:
         return Fraction(self.numerator * other.denominator, self.denominator * other.numerator)
 
     def short(self):
-        for i in range(2, self.numerator + 1):
-            if self.numerator % i == 0 and self.denominator % i == 0:
+        i = 1
+        while i <= self.numerator:
+            if self.numerator % i == 0 and self.denominator % i == 0 and i != 1:
                 self.numerator //= i
                 self.denominator //= i
-                break
+
+            elif self.numerator % i != 0 or self.denominator % i != 0 or i == 1:
+                i += 1
 
     def show(self):
         print(f"{self.numerator} / {self.denominator}")
 
 
-fr = Fraction(4, 6)
-fr1 = Fraction(1, 3)
+# fr = Fraction(4, 6)
+# fr1 = Fraction(1, 3)
+#
+# fr.show()
+# fr1.show()
+#
+# fr2 = fr / fr1
+#
+# fr2.show()
 
-fr.show()
-fr1.show()
-
-fr2 = fr / fr1
-
-fr2.show()
-
-fr3 = Fraction(16, 24)
+fr3 = Fraction(3, 9)
 
 fr3.show()
 
