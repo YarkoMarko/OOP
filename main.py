@@ -28,16 +28,22 @@ class Fraction:
 
             return Fraction(new_numerator1 - new_numerator2, new_denominator)
 
+    def __mul__(self, other):
+        return Fraction(self.numerator * other.numerator, self.denominator * other.denominator)
+
+    def __truediv__(self, other):
+        return Fraction(self.numerator * other.denominator, self.denominator * other.numerator)
+
     def show(self):
         print(f"{self.numerator} / {self.denominator}")
 
 
-fr = Fraction(4, 7)
+fr = Fraction(4, 6)
 fr1 = Fraction(1, 3)
 
 fr.show()
 fr1.show()
 
-fr2 = fr - fr1
+fr2 = fr / fr1
 
 fr2.show()
