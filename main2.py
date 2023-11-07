@@ -11,6 +11,7 @@ class Stadium:
     def get_capacity(self):
         return self._capacity
 
+
 class OldTrafford(Stadium):
     def __init__(self):
         Stadium.__init__(self)
@@ -23,6 +24,6 @@ class OldTrafford(Stadium):
 
 tr = OldTrafford()
 
-print(tr)
+print(tr.get_capacity())
 
 
