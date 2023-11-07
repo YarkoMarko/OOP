@@ -1,8 +1,9 @@
 from datetime import datetime as d
 
+
 class Auto:
     def __str__(self):
-        return f"Name: {self._name}\nDate of release: {self._date}\nMighty: {self._mighty}\nPrice: {self._mighty}"
+        return f"Name: {self._name}\nDate of release: {self._date}\nMighty: {self._mighty}\nPrice: {self._price}"
 
     def __lt__(self, other):
         return self.get_mighty() < other.get_mighty()
